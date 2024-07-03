@@ -3,7 +3,7 @@ import React from 'react';
 function Article(){
     return(
         <div>
-            <h1>Route A propos</h1>
+            <h1>Route Article</h1>
         </div>
     )
 }

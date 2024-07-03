@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ErrorPage(){
+function Apropos(){
     return(
         <div>
             <h1>Route A propos</h1>
@@ -8,4 +8,4 @@ function ErrorPage(){
     )
 }
 
-export default ErrorPage
+export default Apropos
