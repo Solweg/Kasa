@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import React from 'react';
+import Router from './Router';
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <p>Hello</p>
+      <Router/>
     </>
   )
 }
