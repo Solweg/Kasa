@@ -11,7 +11,6 @@ function Router() {
     return (
         <>
             <BrowserRouter>
-                {/* définir les différentes routes ici */}
                 <Header/>
                 <Routes>
                     <Route path="/" element={<Acceuil />} />

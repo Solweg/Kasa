@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import _header from "../styles/_header.scss"
-
+import { Link } from "react-router-dom";
 function Header() {
     return (
         <>
@@ -10,10 +9,10 @@ function Header() {
                 <nav className="navbar">
                     <ul>
                         <li>
-                            <a href="#"> ACCUEIL </a>
+                            <Link to ={"/"}>ACCUEIL</Link>
                         </li>
                         <li>
-                            <a href="src/pages"> A PROPOS </a> 
+                            <Link to ={"apropos"}>A PROPOS</Link>
                         </li>
                     </ul>   
                 </nav>    
