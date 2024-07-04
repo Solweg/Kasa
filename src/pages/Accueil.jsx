@@ -3,7 +3,7 @@ import React from 'react';
 function Acceuil(){
     return(
         <div>
-            <h1>Route Home</h1>
+            <h1>page acceuil</h1>
         </div>
     )
 }

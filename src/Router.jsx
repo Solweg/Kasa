@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Acceuil from './pages/Acceuil'
+import Acceuil from './pages/Accueil'
 import Apropos from './pages/Apropos'
 import Logement from './pages/Logement'
 import ErrorPage from'./pages/ErrorPage'
