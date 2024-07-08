@@ -1,9 +1,11 @@
-
 import React from "react"
+import imgBanner from "../assets/banner_Img1.svg"
 
 function banner (){
     return(
-        <h1>Bannière</h1>
+        <div>
+        <img src={imgBanner} alt="falaises et tempête" />
+        </div>
     )
 }
 

@@ -1,0 +1,33 @@
+// Mobile:
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; 
+}
+
+.logo__header {
+    display: flex;
+    height: 46.88px;
+}
+
+.navbar__header {
+    flex-grow: 1;
+    padding-right: 0;
+}
+
+.navbar__header ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: inherit; 
+    margin-left: 26px; 
+    font-family: Montserrat;
+}
+
+// desktop:
+

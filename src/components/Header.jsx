@@ -1,18 +1,20 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
+import "../styles/header.scss";
+
 function Header() {
     return (
         <>
-            <div>
-                <img src={logo} alt="logo kasa" />
-                <nav className="navbar">
+            <div className="header">
+                <img className="logo__header"src={logo} alt="logo kasa" />
+                <nav className="navbar__header">
                     <ul>
                         <li>
-                            <Link to ={"/"}>ACCUEIL</Link>
+                            <Link className="navbar__link" to ={"/"}>ACCUEIL</Link>
                         </li>
                         <li>
-                            <Link to ={"apropos"}>A PROPOS</Link>
+                            <Link className="navbar__link" to ={"apropos"}>A PROPOS</Link>
                         </li>
                     </ul>   
                 </nav>    
@@ -22,3 +24,4 @@ function Header() {
 }
 
 export default Header;
+

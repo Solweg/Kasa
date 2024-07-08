@@ -1,10 +1,13 @@
 
-import React from 'react';
+import React from "react";
+import Banner from "../components/Banner"
+import Accommodations from "../components/Accommodations"
 
 function Acceuil(){
     return(
         <div>
-            <h1>page acceuil</h1>
+            <Banner/>
+            <Accommodations/>
         </div>
     )
 }

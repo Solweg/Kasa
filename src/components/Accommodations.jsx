@@ -1,10 +1,21 @@
+import React from "react";
+import Data from "../data.json";
+// import { Link } from "react-router-dom";
 
-import React from "react"
-
-function accommodations (){
-    return(
-        <h1>Accommodations</h1>
-    )
+function Accommodations() {
+  return (
+    <div>
+        <article>
+            {Data.map((item) => (
+                <div key={item.id}>
+                <h2>{item.title}</h2>
+                <img src={item.cover} alt={item.title} />
+                </div>
+            ))}
+        </article>
+    </div>
+    
+  );
 }
 
-export default accommodations
+export default Accommodations;
