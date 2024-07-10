@@ -1,0 +1,34 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 66px 0;
+    width: 100%;
+    text-align: center;
+
+    &__logo {
+        height: 39.44px;
+        width: 122px;
+    }
+
+    &__text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        margin-top: 20px;
+
+        span {
+            @media (min-width: 600px) {
+                display: inline;
+            }
+        }
+
+        br {
+            @media (min-width: 600px) {
+                display: none;
+            }
+        }
+    }
+}

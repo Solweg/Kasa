@@ -1,58 +1,54 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 20px; 
-}
-
-.logo__header {
-    display: flex;
-    height: 46.88px;
-}
-
-.navbar__header {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end; /* Assure que les liens sont à droite */
-}
-
-.navbar__header ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0; 
-    gap: 26px; 
-}
-
-.navbar__link {
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: inherit; 
-    font-size: 12px;
-    font-weight: 500;
-    display: flex;
-    align-items: center; 
-    list-style-type: none;
-}
-
-.navbar__link.active {
-    text-decoration: underline; /* Souligne le lien actif */
-}
-
-@media (min-width: 768px) {
-    .header {
-        margin: 45px 100px 50px 100px; /* Ajoute des marges spécifiques pour desktop */
-    }
 
     .logo__header {
-        height: 60px; /* Ajuste la hauteur pour desktop */
+        display: flex;
+        height: 46.88px;
     }
 
-    .navbar__header ul {
-        gap: 40px; /* Plus d'espace entre les éléments pour desktop */
-    }
+    .navbar__header {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end; /* Assure que les liens sont à droite */
 
-    .navbar__link {
-        font-size: 16px; /* Augmente la taille de la police pour desktop */
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 26px;
+
+            .navbar__link {
+                text-decoration: none;
+                font-family: 'Montserrat', sans-serif;
+                color: inherit;
+                font-size: 12px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+
+                &.active {
+                    text-decoration: underline; /* Souligne le lien actif */
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .header {
+        margin: 45px 100px 50px 100px;
+
+        .logo__header {
+            height: 60px;
+        }
+
+        .navbar__header ul {
+            gap: 40px;
+
+            .navbar__link {
+                font-size: 16px;
+            }
+        }
     }
 }
