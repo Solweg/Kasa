@@ -1,17 +1,29 @@
 $mobile-gap: 20px;
-$container-bg-color: #F6F6F6;
 $desktop-card-size: 340px;
 $desktop-horizontal-gap: 60px;
-$desktop-vertical-gap: 70px;
+$container-bg-color: #F6F6F6;
 
 .accommodations-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 22px;
-  margin-bottom: 27px;
-  gap: $mobile-gap; /* Gap for mobile */
-  padding: 0; /* No padding for mobile */
+  justify-content: center; /* Center the cards */
+  gap: $mobile-gap;
+  margin: 22px 0 27px;
+  padding: 0;
+
+  @media (min-width: 600px) {
+    gap: $mobile-gap;
+    padding: $mobile-gap;
+    background-color: $container-bg-color;
+    border-radius: 25px;
+  }
+
+  @media (min-width: 769px) {
+    gap: $desktop-horizontal-gap;
+    padding: 56px 50px 46px;
+    background-color: $container-bg-color;
+    border-radius: 25px;
+  }
 }
 
 .accommodation-card {
@@ -19,6 +31,7 @@ $desktop-vertical-gap: 70px;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer; /* Add pointer cursor on hover */
 
   img {
     width: 100%;
@@ -31,37 +44,22 @@ $desktop-vertical-gap: 70px;
     position: absolute;
     bottom: 0;
     left: 0;
-    margin-left: 9.71px;
-    margin-bottom: 15px;
+    margin: 0 0 15px 9.71px;
+    padding: 10px;
     font-weight: 700;
     font-size: 18px;
     line-height: 25.67px;
     color: white; /* White text for better contrast on the image */
     text-align: left;
-    margin: 0;
-    padding: 10px;
-  }
-}
-
-@media (min-width: 600px) {
-  .accommodations-container {
-    gap: $mobile-gap; /* Gap for tablet */
-    padding: $mobile-gap;
-    background-color: $container-bg-color;
-    border-radius: 25px;
-    justify-content: space-between;
-    padding: 56px 50px 46px; 
-    background-color: $container-bg-color;
-    border-radius: 25px;
   }
 
-  .accommodation-card {
+  @media (min-width: 600px) {
     width: calc(100% - #{$mobile-gap});
+  }
+
+  @media (min-width: 769px) {
+    flex: 0 1 $desktop-card-size;
     width: $desktop-card-size;
     height: $desktop-card-size;
-    margin-bottom: $desktop-vertical-gap;
-    margin-right: $desktop-horizontal-gap; /* Set horizontal gap between cards */
   }
-  
-
 }
