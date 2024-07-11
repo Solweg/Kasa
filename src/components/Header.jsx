@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import "../styles/header.scss";
-import "../styles/all.scss"
+import "../styles/all.scss";
 
 function Header() {
     return (
@@ -11,10 +11,20 @@ function Header() {
             <nav className="navbar__header">
                 <ul>
                     <li>
-                        <NavLink exact className="navbar__link" to="/" activeClassName="active">ACCUEIL</NavLink>
+                        <NavLink 
+                            to="/" 
+                            className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}
+                        >
+                            ACCUEIL
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink className="navbar__link" to="/apropos" activeClassName="active">A PROPOS</NavLink>
+                        <NavLink 
+                            to="/apropos" 
+                            className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}
+                        >
+                            A PROPOS
+                        </NavLink>
                     </li>
                 </ul>
             </nav>

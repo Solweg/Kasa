@@ -1,7 +1,9 @@
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 27px;
 
     .logo__header {
         display: flex;
@@ -37,7 +39,8 @@
 
 @media (min-width: 600px) {
     .header {
-        margin: 45px 100px 50px 100px;
+        margin-top: 45px;
+        margin-bottom: 50px;
 
         .logo__header {
             height: 60px;

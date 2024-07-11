@@ -1,13 +1,14 @@
 
 import React from "react";
 import Banner from "../components/Banner"
-import Accommodations from "../components/Accommodations"
+import Accommodations from "../components/Accommodations.jsx"
+
 
 function Acceuil(){
     return(
         <div>
-            <Banner/>
-            <Accommodations/>
+             <Banner currentPage="home" />
+             <Accommodations/>
         </div>
     )
 }
