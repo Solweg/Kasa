@@ -1,0 +1,31 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff;
+
+    .error-code {
+        font-size: 10rem;
+        color: #FF6060;
+    }
+
+    .error-message {
+        font-size: 1.5rem;
+        color: #FF6060;
+        margin: 1rem 0;
+    }
+
+    .error-link {
+        font-size: 1rem;
+        color: #000;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:hover {
+            color: #FF6060;
+        }
+    }
+}
