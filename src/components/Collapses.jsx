@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../../styles/collapses/collapsesPropos.scss";
+import "../styles/collapses.scss";
+
 
 function CollapsesPropos() {
     const [openCollapses, setOpenCollapses] = useState([]);
@@ -29,13 +30,7 @@ function CollapsesPropos() {
                 <div className={`collapse-item ${openCollapses.includes(index) ? "open" : ""}`} key={index}>
                     <div className="collapse-header" onClick={() => toggleCollapse(index)}>
                         {title}
-                        <span className="collapse-icon">
-                            {openCollapses.includes(index) ? (
-                                <i className="fa-solid fa-chevron-down"></i>
-                            ) : (
-                                <i className="fa-solid fa-chevron-up"></i>
-                            )}
-                        </span>
+                        <span className={`collapse-icon ${openCollapses.includes(index) ? "open" : ""}`} />
                     </div>
                     <div
                         className="collapse-content"

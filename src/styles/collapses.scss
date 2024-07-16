@@ -31,17 +31,30 @@
         justify-content: space-between;
         align-items: center;
         color: #fff; /* Couleur blanche pour le texte */
+        position: relative; /* Ajouté pour positionner le chevron */
         transition: background-color 0.3s ease; /* Transition fluide pour le changement de couleur */
 
         @media (min-width: 600px) {
             height: 54px; /* Hauteur fixe de 54px */
             font-size: 24px; /* Taille de la police de 24px */
         }
-    }
 
-    .collapse-icon {
-        margin-left: 10px;
-        color: #fff; /* Couleur blanche pour l'icône */
+        .collapse-icon {
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            height: 10px;
+            width: 10px;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            transform: rotate(45deg);
+            transition: transform 0.3s ease, top 0.3s ease;
+
+            &.open {
+                top: 17px;
+                transform: rotate(-135deg);
+            }
+        }
     }
 
     .collapse-content {

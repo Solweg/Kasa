@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import Carroussel from "../components/Carroussel.jsx"
+
+
 
 function Article(){
     return(
         <div>
-            <h1>Route Article</h1>
+            <Carroussel/>
         </div>
     )
 }

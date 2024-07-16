@@ -1,12 +1,12 @@
 import React from 'react';
 import Banner from "../components/Banner";
-import CollapsesPropos from "../components/collapses/CollapsesPropos"
+import Collapses from "../components/Collapses"
 
 function Apropos(){
     return(
         <div>
              <Banner currentPage="about" />
-             <CollapsesPropos/>
+             <Collapses/>
         </div>
     )
 }
