@@ -1,14 +1,8 @@
-import React from "react";
-import Carroussel from "../components/Carroussel.jsx"
+import React from 'react';
+import { Logement as LogementComponent } from "../components/Collapses";
 
-
-
-function Article(){
-    return(
-        <div>
-            <Carroussel/>
-        </div>
-    )
+function Logement() {
+    return <LogementComponent />;
 }
 
-export default Article
+export default Logement;

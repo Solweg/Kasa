@@ -1,14 +1,8 @@
 import React from 'react';
-import Banner from "../components/Banner";
-import Collapses from "../components/Collapses"
+import { Apropos as AproposComponent } from "../components/Collapses";
 
-function Apropos(){
-    return(
-        <div>
-             <Banner currentPage="about" />
-             <Collapses/>
-        </div>
-    )
+function Apropos() {
+    return <AproposComponent />;
 }
 
-export default Apropos
+export default Apropos;
