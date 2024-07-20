@@ -1,11 +1,14 @@
 .collapses-container {
     width: 100%;
-    margin: 19px auto; /* Combine margin-top et margin-bottom */
+    margin: 0 auto;
+    margin-top: 19px;
+    margin-bottom: 19px;
     gap: 20px;
 
     @media (min-width: 600px) {
         max-width: 1023px;
-        margin: 38px auto; /* Combine margin-top et margin-bottom pour le bureau */
+        margin-top: 38px; /* Marges spécifiques pour le bureau */
+        margin-bottom: 36px; /* Marges spécifiques pour le bureau */
     }
 }
 
@@ -15,25 +18,25 @@
     &.open .collapse-content {
         visibility: visible;
         opacity: 1;
-        transition: max-height 0.3s ease, visibility 0s linear, opacity 0.3s linear; /* Simplification des délais */
+        transition: max-height 0.3s ease, visibility 0s linear 0s, opacity 0.3s linear;
     }
 
     .collapse-header {
         border-radius: 5px;
         background-color: #FF6060;
-        padding: 10px;
+        padding: 10px; /* Ajustement du padding */
         font-weight: bold;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #fff;
-        position: relative;
-        transition: background-color 0.3s ease;
+        color: #fff; /* Couleur blanche pour le texte */
+        position: relative; /* Ajouté pour positionner le chevron */
+        transition: background-color 0.3s ease; /* Transition fluide pour le changement de couleur */
 
         @media (min-width: 600px) {
-            height: 54px;
-            font-size: 24px;
+            height: 54px; /* Hauteur fixe de 54px */
+            font-size: 24px; /* Taille de la police de 24px */
         }
 
         .collapse-icon {
@@ -56,8 +59,10 @@
 
     .collapse-content {
         background-color: #fff;
-        margin: 10px 0 20px 15px; /* Combine margin-left, margin-top et margin-bottom */
-        color: #000;
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: #000; /* Couleur noire pour le texte du contenu */
         max-height: 0;
         overflow: hidden;
         visibility: hidden;
@@ -65,8 +70,8 @@
         transition: max-height 0.3s ease, visibility 0s linear 0.3s, opacity 0.3s linear;
 
         @media (min-width: 600px) {
-            max-height: 500px;
-            margin-bottom: 30px;
+            max-height: 500px; /* Ajustement de la hauteur maximale pour les grands écrans */
+            margin-bottom: 30px; /* Ajout de margin-bottom pour les grands écrans */
         }
     }
 }
