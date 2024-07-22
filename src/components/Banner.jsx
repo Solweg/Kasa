@@ -1,23 +1,13 @@
 import React from "react";
 import "../styles/banner.scss";
-import imgBannerHome from "../assets/banner_Img1.svg";
-import imgBannerAbout from "../assets/banner_Img2.png";
-import PropTypes from "prop-types";
 
-function Banner({ currentPage }) {
-    const bannerImage = currentPage === 'about' ? imgBannerAbout : imgBannerHome;
-    const bannerClass = currentPage === 'about' ? 'banner banner--about' : 'banner banner--home';
-
+function Banner({ img, text, className }) {
     return (
-        <div className={bannerClass}>
-            <img className="img__banner" src={bannerImage} alt="bannière" />
-            <p className="banner__text">Chez vous, partout et ailleurs</p>
+        <div className={`banner ${className}`}>
+            <img className="img__banner" src={img} alt="falaises" />
+            {!text ? "" : <h1 className="banner__text">{text}</h1>}
         </div>
     );
 }
-
-Banner.propTypes = {
-    currentPage: PropTypes.string.isRequired,
-};
 
 export default Banner;
