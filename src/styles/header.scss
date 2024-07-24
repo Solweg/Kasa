@@ -1,56 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+}
+
 .header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 27px 20px 20px 20px;
+    margin: 27px 0;
+}
 
-    .logo__header {
-        display: flex;
-        height: 46.88px;
-    }
+.header .logo__header {
+    display: flex;
+    height: 46.88px;
+}
 
-    .navbar__header {
-        flex-grow: 1;
-        display: flex;
-        justify-content: flex-end; /* Assure que les liens sont à droite */
+.header .navbar__header {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
 
-        ul {
-            display: flex;
-            list-style-type: none;
-            gap: 26px;
+.header .navbar__header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 26px;
+}
 
-            .navbar__link {
-                text-decoration: none;
-                font-family: 'Montserrat', sans-serif;
-                color: inherit;
-                font-size: 12px;
-                font-weight: 500;
-                display: flex;
-                align-items: center;
+.header .navbar__header ul .navbar__link {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
 
-                &.active {
-                    text-decoration: underline; /* Souligne le lien actif */
-                }
-            }
-        }
-    }
+.header .navbar__header ul .navbar__link.active {
+    text-decoration: underline;
 }
 
 @media (min-width: 600px) {
+    body {
+        padding: 20px 100px;
+    }
+
     .header {
-        margin-top: 45px;
-        margin-bottom: 50px;
+        margin: 45px 0 50px 0;
+    }
 
-        .logo__header {
-            height: 60px;
-        }
+    .header .logo__header {
+        height: 60px;
+    }
 
-        .navbar__header ul {
-            gap: 40px;
+    .header .navbar__header ul {
+        gap: 40px;
+    }
 
-            .navbar__link {
-                font-size: 16px;
-            }
-        }
+    .header .navbar__header ul .navbar__link {
+        font-size: 16px;
     }
 }
