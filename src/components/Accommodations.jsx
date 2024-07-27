@@ -1,3 +1,4 @@
+// Accommodations.jsx
 import React from "react";
 import Data from "../data.json";
 import { Link } from "react-router-dom";
@@ -6,7 +7,7 @@ import "../styles/accommodations.scss";
 function Accommodations() {
   return (
     <div className="accommodations-container">
-      {Data.map((item) => (
+      {Data.slice(0, 6).map((item) => (
         <Link 
           key={item.id}
           to={`/logement/${item.id}`}

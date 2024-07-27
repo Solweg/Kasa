@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/collapses.scss";
+import VectorIcon from "../assets/Vector.png"; // Importez l'image
 
 // Composant fonctionnel qui affiche des éléments collapsibles
 function Collapses({ items = [] }) {
@@ -38,8 +39,10 @@ function Collapses({ items = [] }) {
                 <div className={`collapse-item ${openCollapses.includes(index) ? "open" : ""}`} key={index}>
                     <div className="collapse-header" onClick={() => toggleCollapse(index)}>
                         {item.title}
-                        {/* Icône pour indiquer l'état ouvert/fermé */}
-                        <span className={`collapse-icon ${openCollapses.includes(index) ? "open" : ""}`} />
+                        {/* Utilisez l'image pour indiquer l'état ouvert/fermé */}
+                        <span className={`collapse-icon ${openCollapses.includes(index) ? "open" : ""}`}>
+                            <img src={VectorIcon} alt="Toggle icon" />
+                        </span>
                     </div>
                     <div className="collapse-content" ref={(el) => (contentRefs.current[index] = el)}>
                         {item.content}
