@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/carroussel.scss";
+import VectorIcon from "../assets/VectorAccommodations.png";
 
 function Carroussel({ pictures }) {
   const [current, setCurrent] = useState(0);
@@ -14,9 +15,13 @@ function Carroussel({ pictures }) {
 
   return (
     <div className="carroussel">
-      <button onClick={prevSlide} className="prev">
-        &#10094;
-      </button>
+      {pictures.length > 1 && (
+        <>
+          <button onClick={prevSlide} className="prev">
+            <img src={VectorIcon} alt="Previous" className="icon prev-icon" />
+          </button>
+        </>
+      )}
       <div className="carroussel-inner">
         {pictures.map((picture, index) => (
           <div
@@ -28,9 +33,16 @@ function Carroussel({ pictures }) {
           </div>
         ))}
       </div>
-      <button onClick={nextSlide} className="next">
-        &#10095;
-      </button>
+      {pictures.length > 1 && (
+        <>
+          <button onClick={nextSlide} className="next">
+            <img src={VectorIcon} alt="Next" className="icon next-icon" />
+          </button>
+          <div className="carroussel-counter">
+            {current + 1}/{pictures.length}
+          </div>
+        </>
+      )}
     </div>
   );
 }
