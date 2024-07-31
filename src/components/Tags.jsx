@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/tags.scss"
 
 function Tags({ tags }) {
     return (
-        <div>
+        <div className="tags-container">
             {tags.map((tag, index) => (
-                <span key={index} style={{ marginRight: '10px', padding: '5px', border: '1px solid #ccc', borderRadius: '5px' }}>
+                <span key={index}className="tags">
                     {tag}
                 </span>
             ))}

@@ -5,75 +5,84 @@
     margin-bottom: 19px;
     gap: 20px;
     padding: 0 108.5px; /* Padding de 108.5px à droite et à gauche */
-
+  
     @media (min-width: 600px) {
-        margin-top: 38px; /* Marges spécifiques pour le bureau */
-        margin-bottom: 36px; /* Marges spécifiques pour le bureau */
+      margin-top: 38px; /* Marges spécifiques pour le bureau */
+      margin-bottom: 36px; /* Marges spécifiques pour le bureau */
     }
-}
-
-.collapse-item {
+  
+    &.logement-collapses-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0;
+      justify-content: center;
+    }
+  }
+  
+  .collapse-item {
     overflow: hidden;
-
+  
     &.open .collapse-content {
-        visibility: visible;
-        opacity: 1;
-        transition: max-height 0.3s ease, visibility 0s linear 0s, opacity 0.3s linear;
+      visibility: visible;
+      opacity: 1;
+      transition: max-height 0.3s ease, visibility 0s linear 0s, opacity 0.3s linear;
     }
-
+  
     .collapse-header {
-        border-radius: 5px;
-        background-color: #FF6060;
-        padding: 10px; /* Ajustement du padding */
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #fff; /* Couleur blanche pour le texte */
-        position: relative; /* Ajouté pour positionner le chevron */
-        transition: background-color 0.3s ease; /* Transition fluide pour le changement de couleur */
-
-        @media (min-width: 600px) {
-            height: 54px; /* Hauteur fixe de 54px */
-            font-size: 24px; /* Taille de la police de 24px */
+      border-radius: 5px;
+      background-color: #FF6060;
+      padding: 10px; /* Ajustement du padding */
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff; /* Couleur blanche pour le texte */
+      position: relative; /* Ajouté pour positionner le chevron */
+      transition: background-color 0.3s ease; /* Transition fluide pour le changement de couleur */
+  
+      @media (min-width: 600px) {
+        height: 54px; /* Hauteur fixe de 54px */
+        font-size: 24px; /* Taille de la police de 24px */
+      }
+  
+      .collapse-icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 32px;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+  
+        &.open {
+          transform: translateY(-50%) rotate(-180deg); /* Rotation de -180 degrés pour l'icône ouverte */
         }
-
-        .collapse-icon {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            width: 32px;
-            transform: translateY(-50%);
-            transition: transform 0.3s ease;
-
-            &.open {
-                transform: translateY(-50%) rotate(-180deg); /* Rotation de -180 degrés pour l'icône ouverte */
-            }
-
-            img {
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
+  
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
         }
+      }
     }
-
+  
     .collapse-content {
-        background-color: #fff;
-        margin-left: 15px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        color: #000; /* Couleur noire pour le texte du contenu */
-        max-height: 0;
-        overflow: hidden;
-        visibility: hidden;
-        opacity: 0;
-        transition: max-height 0.3s ease, visibility 0s linear 0.3s, opacity 0.3s linear;
-
-        @media (min-width: 600px) {
-            max-height: 500px; /* Ajustement de la hauteur maximale pour les grands écrans */
-            margin-bottom: 30px; /* Ajout de margin-bottom pour les grands écrans */
-        }
+      background-color: #fff;
+      margin-left: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: #000; /* Couleur noire pour le texte du contenu */
+      max-height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, visibility 0s linear 0.3s, opacity 0.3s linear;
+  
+      @media (min-width: 600px) {
+        max-height: 500px; /* Ajustement de la hauteur maximale pour les grands écrans */
+        margin-bottom: 30px; /* Ajout de margin-bottom pour les grands écrans */
+      }
     }
-}
+  }
+  

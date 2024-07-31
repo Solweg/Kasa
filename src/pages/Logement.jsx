@@ -6,6 +6,7 @@ import data from "../data.json";
 import TitleAccommodations from "../components/TitleAccommodations.jsx";
 import HostInfo from "../components/HostInfo.jsx";
 import Tags from "../components/Tags.jsx";
+import "../styles/logement.scss"
 
 function Logement() {
   const { id } = useParams();
@@ -35,10 +36,14 @@ function Logement() {
   return (
     <div>
       <Carroussel pictures={logement.pictures} />
-      <TitleAccommodations title={logement.title} location={logement.location} />
-      <HostInfo host={logement.host} rating={logement.rating} />
-      <Tags tags={logement.tags}/>
-      <Collapses items={logementData} />
+      <div className="info-container">
+        <TitleAccommodations title={logement.title} location={logement.location} />
+        <HostInfo host={logement.host} rating={logement.rating} />
+      </div>
+      <Tags tags={logement.tags} />
+      <div className="logement-collapses">
+        <Collapses items={logementData} containerClass="logement-collapses-container" />
+      </div>
     </div>
   );
 }

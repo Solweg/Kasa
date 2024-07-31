@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/titleaccommodations.scss"
 
 function TitleAccommodations({ title, location }) {
     return (
-        <div>
-            <h1>{title}</h1>
-            <p>{location}</p>
+        <div className="titleaccommodations-container">
+            <h1 className="title">{title}</h1>
+            <p className="location">{location}</p>
         </div>
     );
 }

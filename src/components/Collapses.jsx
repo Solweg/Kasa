@@ -3,7 +3,7 @@ import "../styles/collapses.scss";
 import VectorIcon from "../assets/Vector.png"; // Importez l'image
 
 // Composant fonctionnel qui affiche des éléments collapsibles
-function Collapses({ items = [] }) {
+function Collapses({ items = [], containerClass = "" }) {
     // État pour suivre quels éléments sont ouverts
     const [openCollapses, setOpenCollapses] = useState([]);
     // Référence pour stocker les références des éléments de contenu
@@ -33,7 +33,7 @@ function Collapses({ items = [] }) {
     }, [openCollapses]); // Déclencher cet effet chaque fois que openCollapses change
 
     return (
-        <div className="collapses-container">
+        <div className={`collapses-container ${containerClass}`}>
             {/* Boucler sur les items pour rendre chaque élément collapsible */}
             {items.map((item, index) => (
                 <div className={`collapse-item ${openCollapses.includes(index) ? "open" : ""}`} key={index}>
