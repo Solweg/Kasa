@@ -1,3 +1,5 @@
+// carrousel d'images avec navigation et compteur.
+
 import React, { useState } from "react";
 import "../styles/carroussel.scss";
 import VectorIcon from "../assets/VectorAccommodations.png";
@@ -16,11 +18,9 @@ function Carroussel({ pictures }) {
   return (
     <div className="carroussel">
       {pictures.length > 1 && (
-        <>
-          <button onClick={prevSlide} className="prev">
-            <img src={VectorIcon} alt="Previous" className="icon prev-icon" />
-          </button>
-        </>
+        <button onClick={prevSlide} className="prev">
+          <img src={VectorIcon} alt="Précédent" className="icon prev-icon" />
+        </button>
       )}
       <div className="carroussel-inner">
         {pictures.map((picture, index) => (
@@ -36,7 +36,7 @@ function Carroussel({ pictures }) {
       {pictures.length > 1 && (
         <>
           <button onClick={nextSlide} className="next">
-            <img src={VectorIcon} alt="Next" className="icon next-icon" />
+            <img src={VectorIcon} alt="Suivant" className="icon next-icon" />
           </button>
           <div className="carroussel-counter">
             {current + 1}/{pictures.length}

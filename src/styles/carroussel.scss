@@ -1,23 +1,23 @@
 .carroussel {
   position: relative;
-  width: 335px; // Largeur pour mobile
-  height: 255px; // Hauteur pour mobile
+  width: 335px;
+  height: 255px;
   margin: auto;
   overflow: hidden;
-  border-radius: 10px 0px 0px 0px; // Rayon de bordure pour mobile
-  opacity: 1; // Opacité par défaut
+  border-radius: 10px 0 0 0;
+  opacity: 1;
 
   .carroussel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
-    gap: 0px; // Espace entre les éléments pour mobile
+    gap: 0;
   }
 
   .carroussel-item {
     min-width: 100%;
     transition: opacity 0.5s ease-in-out;
-    opacity: 0; // Opacité pour mobile
+    opacity: 0;
 
     &.active {
       opacity: 1;
@@ -29,7 +29,7 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      border-radius: 10px 0px 0px 0px; // Rayon de bordure pour les images
+      border-radius: 25px;
     }
   }
 
@@ -40,13 +40,13 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    padding: 10px; // Padding par défaut pour mobile
+    padding: 10px;
     cursor: pointer;
     z-index: 1;
 
     .icon {
-      width: clamp(11.67px, 2.5vw, 46.68px); // Taille des icônes pour mobile et grands écrans
-      height: clamp(19.8px, 4.2vw, 79.2px); // Hauteur des icônes pour mobile et grands écrans
+      width: clamp(11.67px, 2.5vw, 46.68px);
+      height: clamp(19.8px, 4.2vw, 79.2px);
     }
 
     &:hover {
@@ -76,20 +76,15 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: clamp(14px, 3vw, 18px); // Utiliser clamp pour la taille de police
-    line-height: 1.5; // Hauteur de ligne proportionnelle
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 1.5;
     z-index: 1;
   }
 
   @media (min-width: 768px) {
-    width: 90vw; // Largeur relative à la largeur de la fenêtre pour tablettes et plus grands écrans
-    max-width: 1240px; // Limite maximale de la largeur
-    height: calc(90vw * (415 / 1240)); // Hauteur relative à la largeur avec le même ratio
-    max-height: 415px; // Limite maximale de la hauteur
-    border-radius: 25px; // Rayon de bordure pour grands écrans
-
-    .carroussel-item img {
-      border-radius: 25px; // Appliquer le rayon de bordure aux images pour grands écrans
-    }
+    width: 100%;
+    height: calc(90vw * (415 / 1240));
+    max-height: 415px;
+    border-radius: 25px;
   }
 }

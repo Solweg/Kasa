@@ -1,3 +1,5 @@
+// Détails d'un logement avec carrousel, informations, tags et collapses.
+
 import React from "react";
 import { useParams } from "react-router-dom";
 import Carroussel from "../components/Carroussel";
@@ -6,7 +8,7 @@ import data from "../data.json";
 import TitleAccommodations from "../components/TitleAccommodations.jsx";
 import HostInfo from "../components/HostInfo.jsx";
 import Tags from "../components/Tags.jsx";
-import "../styles/logement.scss"
+import "../styles/logement.scss";
 
 function Logement() {
   const { id } = useParams();
@@ -34,17 +36,25 @@ function Logement() {
   ];
 
   return (
-    <div>
+    <div className="logement-container">
       <Carroussel pictures={logement.pictures} />
       <div className="info-container">
-        <TitleAccommodations title={logement.title} location={logement.location} />
-        <HostInfo host={logement.host} rating={logement.rating} />
+        <div className="info-container--left">
+          {/* titre et localisation */}
+          <TitleAccommodations title={logement.title} location={logement.location} />
+          {/* mots clé */}
+        <Tags tags={logement.tags} />
+        </div>
+        <div className="info-container--right">  
+          {/* Loueur et notation */}
+          <HostInfo host={logement.host} rating={logement.rating} />
+        </div>
       </div>
-      <Tags tags={logement.tags} />
       <div className="logement-collapses">
         <Collapses items={logementData} containerClass="logement-collapses-container" />
       </div>
-    </div>
+    </div>  
+    
   );
 }
 

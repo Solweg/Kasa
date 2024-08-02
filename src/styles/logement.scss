@@ -1,19 +1,13 @@
 .info-container {
-  display: flex;
-  justify-content: space-between; // Ajoute un espace entre les composants
-  align-items: center; // Aligne les éléments verticalement au centre
-  gap: 20px; // Ajoute un écart entre les composants, si nécessaire
-}
+  @media (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
 
-.logement-collapses {
-  display: flex;
-  flex-wrap: wrap; // Permet de passer à la ligne si nécessaire
-  gap: 20px; // Ajoute un écart entre les collapses
-  justify-content: center; // Centre les collapses horizontalement
-
-  .collapse-item {
-    flex: 1 1 582px; // Chaque collapse prendra jusqu'à 582px, mais pas plus
-    max-width: 582px; // Limite la largeur maximale de chaque collapse
-    box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
+    &--left{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
+
