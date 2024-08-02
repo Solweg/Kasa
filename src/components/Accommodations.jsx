@@ -8,7 +8,7 @@ import "../styles/accommodations.scss";
 function Accommodations() {
   return (
     <div className="accommodations-container">
-      {Data.slice(0, 6).map((item) => (
+      {Data.slice(0,6).map((item) => (
         <Link 
           key={item.id}
           to={`/logement/${item.id}`}

@@ -4,6 +4,7 @@ import React from 'react';
 import Banner from "../components/Banner.jsx";
 import ImgBannerAbout from "../assets/banner_Img2.png";
 import Collapses from "../components/Collapses.jsx";
+import "../styles/apropos.scss";
 
 const aboutData = [
   {
@@ -28,7 +29,7 @@ function Apropos() {
   return (
     <div>
       <Banner img={ImgBannerAbout} text="" className="banner--about" />
-      <Collapses items={aboutData} />
+      <Collapses items={aboutData} containerClass="apropos-collapses-container" />
     </div>
   );
 }

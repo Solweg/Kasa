@@ -1,5 +1,4 @@
 .collapses-container {
-  // min-width: 1240px;
   height: 100%;
   margin: 19px auto;
   gap: 20px;
@@ -28,7 +27,7 @@
 
   .collapse-header {
     border-radius: 5px;
-    background-color: #FF6060;
+    background-color: #FF6060; // Couleur par défaut, peut être remplacée dans apropos.scss
     padding: 10px;
     font-weight: bold;
     cursor: pointer;
@@ -36,7 +35,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    color: #fff;
+    color: #fff; // Couleur par défaut, peut être remplacée dans apropos.scss
     position: relative;
     transition: background-color 0.3s ease;
 
@@ -66,9 +65,9 @@
   }
 
   .collapse-content {
-    background-color: #fff;
+    background-color: #fff; // Couleur par défaut, peut être remplacée dans apropos.scss
     margin: 10px 0 20px 15px;
-    color: #000;
+    color: #000; // Couleur par défaut, peut être remplacée dans apropos.scss
     max-height: 0;
     overflow: hidden;
     visibility: hidden;
