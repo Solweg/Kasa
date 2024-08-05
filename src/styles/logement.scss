@@ -1,5 +1,9 @@
 .logement-container{
 .info-container {
+  &--right{
+    display: flex;
+    flex-direction: row-reverse;
+  }
   @media (min-width: 600px) {
     display: flex;
     justify-content: space-between;

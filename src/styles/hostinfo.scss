@@ -1,30 +1,83 @@
 .hostinfo-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; // Disposition en colonne par défaut pour les petits écrans
 
   .host {
-    margin-top: 30px;
+    margin: 0; // Pas de margin-top en mobile
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; // Alignement des éléments en ligne pour mobile
+    align-items: center; // Centrer verticalement les éléments
 
     .picture-host {
       border-radius: 50%;
-      max-width: 64px;
+      width: 32px; // Taille par défaut pour mobile
+      height: 32px;
     }
 
     .name-host {
       color: #FF6060;
-      font-size: 18px;
+      font-size: 12px; // Taille du texte pour mobile
       font-weight: 500;
       display: flex;
       align-items: center;
-      margin-right: 10px;
+      margin-right: 10px; // Espacement entre la photo et le nom
     }
   }
 
   .rating {
     display: flex;
     justify-content: flex-end;
-    margin-top: 27px;
+    gap: 2px; // Espacement entre les étoiles
+    margin: 0; // Pas de margin-top en mobile
+
+    img.star {
+      width: 13.41px; // Largeur des étoiles pour mobile
+      height: 13px;
+    }
+  }
+
+  // Styles pour les écrans moyens (tablettes)
+  @media (min-width: 600px) {
+    .host {
+      margin-top: 20px; // Margin-top pour les écrans moyens
+
+      .picture-host {
+        width: 40px; // Taille de la photo pour les écrans moyens
+        height: 40px;
+      }
+
+      .name-host {
+        font-size: 14px; // Taille du texte pour les écrans moyens
+      }
+    }
+
+    .rating {
+      gap: 3px; // Espacement entre les étoiles pour les écrans moyens
+    }
+  }
+
+  // Styles pour les grands écrans (ordinateurs de bureau)
+  @media (min-width: 900px) {
+    flex-direction: row; // Disposition en ligne pour les grands écrans
+    justify-content: space-between; // Espacement entre les éléments
+    align-items: center;
+
+    .host {
+      margin-top: 30px; // Margin-top pour les grands écrans
+
+      .picture-host {
+        width: 64px; // Taille de la photo pour les grands écrans
+        height: 64px;
+      }
+
+      .name-host {
+        font-size: 18px; // Taille du texte pour les grands écrans
+      }
+    }
+
+    .rating {
+      margin-top: 0; // Retire le margin-top pour les grands écrans
+      gap: 5px; // Espacement entre les étoiles pour les grands écrans
+    }
   }
 }

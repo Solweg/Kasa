@@ -1,7 +1,6 @@
-// En-tête avec le logo et la barre de navigation.
-
 import React from "react";
-import logo from "../assets/logo.png";
+import logomobile from "../assets/logomobile.png";
+import logodesktop from "../assets/logodesktop.png";
 import { NavLink } from "react-router-dom";
 import "../styles/header.scss";
 
@@ -9,7 +8,10 @@ function Header() {
   return (
     <div className="container">
       <div className="header">
-        <img className="logo__header" src={logo} alt="logo Kasa" />
+        <picture>
+          <source srcSet={logodesktop} media="(min-width: 600px)" />
+          <img className="logo__header" src={logomobile} alt="logo Kasa" />
+        </picture>
         <nav className="navbar__header">
           <ul>
             <li>

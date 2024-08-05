@@ -1,55 +1,46 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 27px 0;
+
+  .navbar__header {
+    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 27px 0;
-  
-    .logo__header {
-      height: 46.88px;
-    }
-  
-    .navbar__header {
-      flex-grow: 1;
+    justify-content: flex-end;
+
+    ul {
       display: flex;
-      justify-content: flex-end;
-  
-      ul {
-        display: flex;
-        list-style: none;
-        gap: 26px;
-      }
-  
-      .navbar__link {
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-        color: inherit;
-        font-size: 16px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-  
-        &.active {
-          text-decoration: underline;
-        }
-      }
+      list-style: none;
+      gap: 26px;
     }
-  }
-  
-  @media (min-width: 600px) {
-    .header {
-      margin: 45px 0 50px;
-    }
-  
-    .logo__header {
-      height: 60px;
-    }
-  
-    .navbar__header ul {
-      gap: 40px;
-    }
-  
+
     .navbar__link {
-      font-size: 16px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      color: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+
+      &.active {
+        text-decoration: underline;
+      }
     }
   }
-  
+}
+
+@media (min-width: 731px) {
+  .header {
+    margin: 45px 0 50px;
+  }
+
+  .header .navbar__header ul {
+    gap: 40px;
+  }
+
+  .header .navbar__header .navbar__link {
+    font-size: 24px;
+  }
+}

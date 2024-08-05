@@ -1,27 +1,27 @@
 .carroussel {
   position: relative;
-  width: 335px;
-  height: 255px;
-  margin: auto;
+  width: 100%;
+  max-height: 415px; /* Max height for all screen sizes */
+  margin: 0 auto;
   overflow: hidden;
-  border-radius: 10px 0 0 0;
+  border-radius: 10px;
   opacity: 1;
 
   .carroussel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
-    gap: 0;
+    width: 100%; /* Ensure it takes full width */
   }
 
   .carroussel-item {
     min-width: 100%;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
+    transition: transform 0.5s ease-in-out;
+    display: none; /* Hide all items by default */
+    height: 100%; /* Ensure it takes full height */
 
     &.active {
-      opacity: 1;
-      display: block;
+      display: block; /* Show active item */
     }
 
     img {
@@ -81,10 +81,23 @@
     z-index: 1;
   }
 
+  @media (max-width: 767px) {
+    .carroussel-inner {
+      height: 255px; /* Ensure it maintains the height ratio for mobile */
+    }
+    .carroussel-counter {
+      display: none;
+    }
+  }
+
   @media (min-width: 768px) {
-    width: 100%;
-    height: calc(90vw * (415 / 1240));
-    max-height: 415px;
+    .carroussel-inner {
+      height: 415px; /* Ensure it maintains the height ratio for desktop */
+    }
     border-radius: 25px;
+
+    .carroussel-counter {
+      display: block;
+    }
   }
 }

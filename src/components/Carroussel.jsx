@@ -1,5 +1,3 @@
-// carrousel d'images avec navigation et compteur.
-
 import React, { useState } from "react";
 import "../styles/carroussel.scss";
 import VectorIcon from "../assets/VectorAccommodations.png";
@@ -27,7 +25,6 @@ function Carroussel({ pictures }) {
           <div
             className={`carroussel-item ${index === current ? "active" : ""}`}
             key={index}
-            style={{ display: index === current ? "block" : "none" }}
           >
             <img src={picture} alt={`slide-${index}`} />
           </div>
