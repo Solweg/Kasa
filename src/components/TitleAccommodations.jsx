@@ -1,8 +1,7 @@
-// Affichage du titre et l'emplacement des hébergements.
-
 import React from "react";
 import "../styles/titleaccommodations.scss";
 
+// Ce composant affiche le titre et l'emplacement des hébergements.
 function TitleAccommodations({ title, location }) {
   return (
     <div className="titleaccommodations-container">

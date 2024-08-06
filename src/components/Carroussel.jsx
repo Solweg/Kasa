@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import "../styles/carroussel.scss";
 import VectorIcon from "../assets/VectorAccommodations.png";
 
+// Ce composant affiche un carrousel d'images avec des boutons pour naviguer entre les images.
 function Carroussel({ pictures }) {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev === pictures.length - 1 ? 0 : prev + 1));
+    setCurrent(prev => (prev === pictures.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? pictures.length - 1 : prev - 1));
+    setCurrent(prev => (prev === 0 ? pictures.length - 1 : prev - 1));
   };
 
   return (

@@ -1,8 +1,4 @@
-$bp-sm: 568px;
-$bp-md: 768px;
-$bp-lg: 992px;
-$bp-xl: 1200px;
-$bp-xxl: 1440px;
+@import "./variables.scss";
 
 * {
   box-sizing: border-box;
@@ -35,9 +31,9 @@ body {
   max-width: 1240px;
   width: 100%;
   margin: auto;
-  padding: 0 20px; // Padding par défaut pour les petits écrans
+  padding: 0 20px;
 
-  @media (min-width: 1240px) {
-    padding: 0; // Padding pour les écrans à partir de 600px
+  @media (min-width: #{$bp-xl}) {
+    padding: 0;
   }
 }

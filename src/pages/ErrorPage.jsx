@@ -1,9 +1,8 @@
-//page d'erreur 404 avec un message et un lien de retour à la page d'accueil.
-
 import React from 'react';
-import "../styles/errorPage.scss";
 import "../styles/global.scss";
+import "../styles/errorPage.scss";
 
+// Ce composant affiche une page d'erreur 404 avec un message et un lien de retour à la page d'accueil.
 function ErrorPage() {
   return (
     <div className="error-container">

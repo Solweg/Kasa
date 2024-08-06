@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../styles/global.scss"
 import "../styles/banner.scss";
 
+// Ce composant affiche une bannière avec une image et du texte, 
+// et ajuste le texte pour les appareils mobiles.
 function Banner({ img, text, className }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
@@ -11,7 +12,7 @@ function Banner({ img, text, className }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const formatTextForMobile = (text) => text.replace(', ', ',\n');
+  const formatTextForMobile = text => text.replace(', ', ',\n');
 
   return (
     <div className={`banner ${className}`}>

@@ -1,10 +1,12 @@
+@import "./variables.scss";
+
 .logement-container {
   .info-container {
     &--right {
       display: flex;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: #{$bp-sm}) {
       display: flex;
       justify-content: space-between;
 
@@ -22,13 +24,13 @@
 
   .logement-collapses-container {
     display: flex;
-    flex-direction: column; // Disposition en colonne par défaut pour les petits écrans
+    flex-direction: column;
     padding: 0;
-    gap: 0; // Pas de gap en mode mobile
+    gap: 0;
 
-    @media (min-width: 600px) {
-      flex-direction: row; // Disposition en ligne pour les écrans plus grands
-      gap: 20px; // Ajout d'un gap pour les écrans plus grands
+    @media (min-width: #{$bp-sm}) {
+      flex-direction: row;
+      gap: 20px;
     }
 
     .collapse-item {

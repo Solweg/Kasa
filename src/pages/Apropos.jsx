@@ -1,11 +1,11 @@
-// Page "À propos" avec une bannière et les éléments collapsibles.
-
 import React from 'react';
 import Banner from "../components/Banner.jsx";
 import ImgBannerAbout from "../assets/banner_Img2.png";
 import Collapses from "../components/Collapses.jsx";
+import "../styles/global.scss";
 import "../styles/apropos.scss";
 
+// Ce composant affiche la page "À propos" avec une bannière et des éléments collapsibles.
 const aboutData = [
   {
     title: "Fiabilité",

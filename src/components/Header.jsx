@@ -4,6 +4,7 @@ import logodesktop from "../assets/logodesktop.png";
 import { NavLink } from "react-router-dom";
 import "../styles/header.scss";
 
+// Ce composant affiche l'en-tête avec le logo et la barre de navigation.
 function Header() {
   return (
     <div className="container">

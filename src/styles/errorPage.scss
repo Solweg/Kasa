@@ -1,5 +1,7 @@
+@import "./variables.scss";
+
 .error-container {
-  width: 100%; 
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,39 +9,39 @@
   text-align: center;
   background-color: #fff;
 
-  @media (min-width: 1240px) {
-    padding: 0; // Retire le padding pour les grands écrans
+  @media (min-width: #{$bp-xl}) {
+    padding: 0;
   }
 
   .error-code {
-    font-size: 96px; // Taille de police réduite pour les petits écrans
+    font-size: 96px;
     color: #FF6060;
     margin: 104px 0 113px;
 
-    @media (min-width: 600px) {
-      font-size: 144px; // Taille de police intermédiaire pour les écrans moyens
+    @media (min-width: #{$bp-sm}) {
+      font-size: 144px;
       margin: 0 0 100px;
     }
 
-    @media (min-width: 1240px) {
-      font-size: 288px; // Taille de police pour les grands écrans
+    @media (min-width: #{$bp-xl}) {
+      font-size: 288px;
       margin: 0 0 139px;
     }
   }
 
   .error-message {
     color: #FF6060;
-    font-size: 18px; // Taille de police réduite pour les petits écrans
+    font-size: 18px;
     font-weight: 500;
     margin: 0 0 113px;
 
-    @media (min-width: 600px) {
-      font-size: 24px; // Taille de police intermédiaire pour les écrans moyens
+    @media (min-width: #{$bp-sm}) {
+      font-size: 24px;
       margin: 0 0 100px;
     }
 
-    @media (min-width: 1240px) {
-      font-size: 36px; // Taille de police pour les grands écrans
+    @media (min-width: #{$bp-xl}) {
+      font-size: 36px;
       margin: 0 0 139px;
     }
   }
@@ -47,7 +49,7 @@
   .error-link {
     color: #000;
     text-decoration: underline;
-    font-size: 14px; // Taille de police réduite pour les petits écrans
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 113px;
     cursor: pointer;
@@ -56,13 +58,13 @@
       color: #FF6060;
     }
 
-    @media (min-width: 600px) {
-      font-size: 16px; // Taille de police intermédiaire pour les écrans moyens
+    @media (min-width: #{$bp-sm}) {
+      font-size: 16px;
       margin-bottom: 100px;
     }
 
-    @media (min-width: 1240px) {
-      font-size: 18px; // Taille de police pour les grands écrans
+    @media (min-width: #{$bp-xl}) {
+      font-size: 18px;
       margin-bottom: 139px;
     }
   }

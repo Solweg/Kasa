@@ -1,9 +1,8 @@
-// Affichage des éléments collapsibles
-
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/collapses.scss";
 import VectorIcon from "../assets/Vector.png";
 
+// Ce composant affiche des éléments collapsibles (repliables).
 function Collapses({ items = [], containerClass = "" }) {
   const [openCollapses, setOpenCollapses] = useState([]);
   const contentRefs = useRef([]);
@@ -30,28 +29,16 @@ function Collapses({ items = [], containerClass = "" }) {
     <div className={`collapses-container ${containerClass}`}>
       {items.map((item, index) => (
         <div
-          className={`collapse-item ${
-            openCollapses.includes(index) ? "open" : ""
-          }`}
+          className={`collapse-item ${openCollapses.includes(index) ? "open" : ""}`}
           key={index}
         >
-          <div
-            className="collapse-header"
-            onClick={() => toggleCollapse(index)}
-          >
+          <div className="collapse-header" onClick={() => toggleCollapse(index)}>
             {item.title}
-            <span
-              className={`collapse-icon ${
-                openCollapses.includes(index) ? "open" : ""
-              }`}
-            >
+            <span className={`collapse-icon ${openCollapses.includes(index) ? "open" : ""}`}>
               <img src={VectorIcon} alt="Icône de basculement" />
             </span>
           </div>
-          <div
-            className="collapse-content"
-            ref={(el) => (contentRefs.current[index] = el)}
-          >
+          <div className="collapse-content" ref={(el) => (contentRefs.current[index] = el)}>
             {item.content}
           </div>
         </div>

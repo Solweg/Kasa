@@ -1,10 +1,12 @@
+@import "./variables.scss";
+
 .collapses-container {
   height: 100%;
   margin-top: 10px;
   gap: 20px;
   padding: 0 108.5px;
 
-  @media (min-width: 600px) {
+  @media (min-width: #{$bp-sm}) {
     margin-top: 38px;
   }
 
@@ -37,22 +39,21 @@
     color: #fff;
     position: relative;
     transition: background-color 0.3s ease;
-    width: 335px; // Largeur pour mobile
-    height: 30px; // Hauteur pour mobile
-    font-size: 13px; // Taille du texte pour mobile
+    height: 30px;
+    font-size: 13px;
 
-    @media (min-width: 600px) {
-      height: 54px; // Hauteur pour les écrans moyens et grands
-      font-size: 24px; // Taille du texte pour les écrans moyens et grands
-      width: auto; // Annule la largeur fixe pour les écrans moyens et grands
+    @media (min-width: #{$bp-sm}) {
+      height: 54px;
+      font-size: 24px;
+      width: auto;
     }
 
     .collapse-icon {
       position: absolute;
       right: 20px;
       top: 50%;
-      width: 16px; // Taille par défaut pour mobile
-      height: 9.14px; // Taille par défaut pour mobile
+      width: 16px;
+      height: 9.14px;
       transform: translateY(-50%);
       transition: transform 0.3s ease;
 
@@ -66,9 +67,9 @@
         height: 100%;
       }
 
-      @media (min-width: 900px) {
-        width: 24px; // Taille pour les écrans grands
-        height: 13.71px; // Taille pour les écrans grands
+      @media (min-width: #{$bp-md}) {
+        width: 24px;
+        height: 13.71px;
       }
     }
   }
@@ -83,7 +84,7 @@
     opacity: 0;
     transition: max-height 0.3s ease, visibility 0s linear 0.3s, opacity 0.3s linear;
 
-    @media (min-width: 600px) {
+    @media (min-width: #{$bp-sm}) {
       max-height: 500px;
       margin-bottom: 30px;
     }

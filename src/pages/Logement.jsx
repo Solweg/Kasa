@@ -8,6 +8,7 @@ import data from "../data.json";
 import TitleAccommodations from "../components/TitleAccommodations.jsx";
 import HostInfo from "../components/HostInfo.jsx";
 import Tags from "../components/Tags.jsx";
+import "../styles/global.scss";
 import "../styles/logement.scss";
 
 function Logement() {
@@ -40,13 +41,10 @@ function Logement() {
       <Carroussel pictures={logement.pictures} />
       <div className="info-container">
         <div className="info-container--left">
-          {/* titre et localisation */}
           <TitleAccommodations title={logement.title} location={logement.location} />
-          {/* mots clé */}
         <Tags tags={logement.tags} />
         </div>
         <div className="info-container--right">  
-          {/* Loueur et notation */}
           <HostInfo host={logement.host} rating={logement.rating} />
         </div>
       </div>

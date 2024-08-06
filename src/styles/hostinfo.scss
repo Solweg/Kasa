@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .hostinfo-container {
   display: flex;
   flex-direction: row-reverse;
@@ -23,7 +25,7 @@
   .host {
     margin: 0;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
     flex-grow: 1;
 
     .picture-host {
@@ -33,20 +35,18 @@
     }
 
     .name-host {
-      display: flex;
       color: #FF6060;
       font-size: 12px;
       font-weight: 500;
       margin-right: 10px;
       margin-top: 0;
       margin-bottom: 0;
-      word-break: break-word;
       text-align: right;
-      max-width: 80px;
+      max-width: min-content;
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: #{$bp-sm}) {
     flex-direction: column;
 
     .rating {
@@ -70,7 +70,7 @@
     }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: #{$bp-md}) {
     flex-direction: column;
     align-items: flex-end;
 
