@@ -1,3 +1,9 @@
+$bp-sm: 568px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1440px;
+
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -23,16 +29,15 @@ body {
 #root {
   width: 100%;
   background-color: white;
-  padding: 0 20px; // Padding par défaut pour les petits écrans
-
-
-  @media (min-width: 600px) {
-    padding: 0 100px; // Padding pour les écrans à partir de 600px
-  }
 }
 
 .container {
   max-width: 1240px;
   width: 100%;
   margin: auto;
+  padding: 0 20px; // Padding par défaut pour les petits écrans
+
+  @media (min-width: 1240px) {
+    padding: 0; // Padding pour les écrans à partir de 600px
+  }
 }

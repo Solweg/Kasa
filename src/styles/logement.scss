@@ -1,29 +1,38 @@
-.logement-container{
-.info-container {
-  &--right{
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  @media (min-width: 600px) {
-    display: flex;
-    justify-content: space-between;
+.logement-container {
+  .info-container {
+    &--right {
+      display: flex;
+    }
 
-    &--left{
+    @media (min-width: 600px) {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-    }
-    &--right{
-      display: flex;
+
+      &--left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &--right {
+        display: flex;
+      }
     }
   }
-}
-.logement-collapses-container{
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  .collapse-item{
-    flex: 1;
+
+  .logement-collapses-container {
+    display: flex;
+    flex-direction: column; // Disposition en colonne par défaut pour les petits écrans
+    padding: 0;
+    gap: 0; // Pas de gap en mode mobile
+
+    @media (min-width: 600px) {
+      flex-direction: row; // Disposition en ligne pour les écrans plus grands
+      gap: 20px; // Ajout d'un gap pour les écrans plus grands
+    }
+
+    .collapse-item {
+      flex: 1;
+    }
   }
-}
 }

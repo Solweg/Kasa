@@ -1,36 +1,69 @@
 .error-container {
-    width: 1240px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #fff;
-  
-    .error-code {
-      font-size: 288px;
-      color: #FF6060;
-      margin: 0 0 139px;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+
+  @media (min-width: 1240px) {
+    padding: 0; // Retire le padding pour les grands écrans
+  }
+
+  .error-code {
+    font-size: 96px; // Taille de police réduite pour les petits écrans
+    color: #FF6060;
+    margin: 104px 0 113px;
+
+    @media (min-width: 600px) {
+      font-size: 144px; // Taille de police intermédiaire pour les écrans moyens
+      margin: 0 0 100px;
     }
-  
-    .error-message {
-      color: #FF6060;
-      font-size: 36px;
-      font-weight: 500;
+
+    @media (min-width: 1240px) {
+      font-size: 288px; // Taille de police pour les grands écrans
       margin: 0 0 139px;
-    }
-  
-    .error-link {
-      color: #000;
-      text-decoration: underline;
-      font-size: 18px;
-      font-weight: 500;
-      padding-bottom: 139px;
-      cursor: pointer;
-  
-      &:hover {
-        color: #FF6060;
-      }
     }
   }
-  
+
+  .error-message {
+    color: #FF6060;
+    font-size: 18px; // Taille de police réduite pour les petits écrans
+    font-weight: 500;
+    margin: 0 0 113px;
+
+    @media (min-width: 600px) {
+      font-size: 24px; // Taille de police intermédiaire pour les écrans moyens
+      margin: 0 0 100px;
+    }
+
+    @media (min-width: 1240px) {
+      font-size: 36px; // Taille de police pour les grands écrans
+      margin: 0 0 139px;
+    }
+  }
+
+  .error-link {
+    color: #000;
+    text-decoration: underline;
+    font-size: 14px; // Taille de police réduite pour les petits écrans
+    font-weight: 500;
+    margin-bottom: 113px;
+    cursor: pointer;
+
+    &:hover {
+      color: #FF6060;
+    }
+
+    @media (min-width: 600px) {
+      font-size: 16px; // Taille de police intermédiaire pour les écrans moyens
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: 1240px) {
+      font-size: 18px; // Taille de police pour les grands écrans
+      margin-bottom: 139px;
+    }
+  }
+}

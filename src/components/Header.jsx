@@ -21,7 +21,7 @@ function Header() {
                   isActive ? "navbar__link active" : "navbar__link"
                 }
               >
-                ACCUEIL
+                Acceuil
               </NavLink>
             </li>
             <li>
@@ -31,7 +31,7 @@ function Header() {
                   isActive ? "navbar__link active" : "navbar__link"
                 }
               >
-                A PROPOS
+                A propos
               </NavLink>
             </li>
           </ul>

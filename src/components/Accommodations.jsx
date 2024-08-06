@@ -3,7 +3,9 @@
 import React from "react";
 import Data from "../data.json";
 import { Link } from "react-router-dom";
+import "../styles/global.scss"
 import "../styles/accommodations.scss";
+
 
 function Accommodations() {
   return (

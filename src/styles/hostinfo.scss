@@ -1,83 +1,102 @@
 .hostinfo-container {
   display: flex;
-  flex-direction: column; // Disposition en colonne par défaut pour les petits écrans
-
-  .host {
-    margin: 0; // Pas de margin-top en mobile
-    display: flex;
-    flex-direction: row-reverse; // Alignement des éléments en ligne pour mobile
-    align-items: center; // Centrer verticalement les éléments
-
-    .picture-host {
-      border-radius: 50%;
-      width: 32px; // Taille par défaut pour mobile
-      height: 32px;
-    }
-
-    .name-host {
-      color: #FF6060;
-      font-size: 12px; // Taille du texte pour mobile
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      margin-right: 10px; // Espacement entre la photo et le nom
-    }
-  }
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 
   .rating {
     display: flex;
     justify-content: flex-end;
-    gap: 2px; // Espacement entre les étoiles
-    margin: 0; // Pas de margin-top en mobile
+    align-items: end;
+    gap: 2px;
+    margin: 0;
+    height: 18px;
+    order: -1;
 
     img.star {
-      width: 13.41px; // Largeur des étoiles pour mobile
+      width: 13.41px;
       height: 13px;
     }
   }
 
-  // Styles pour les écrans moyens (tablettes)
+  .host {
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+
+    .picture-host {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+    }
+
+    .name-host {
+      display: flex;
+      color: #FF6060;
+      font-size: 12px;
+      font-weight: 500;
+      margin-right: 10px;
+      margin-top: 0;
+      margin-bottom: 0;
+      word-break: break-word;
+      text-align: right;
+      max-width: 80px;
+    }
+  }
+
   @media (min-width: 600px) {
+    flex-direction: column;
+
+    .rating {
+      order: 0;
+      gap: 3px;
+    }
+
     .host {
-      margin-top: 20px; // Margin-top pour les écrans moyens
+      margin-top: 20px;
 
       .picture-host {
-        width: 40px; // Taille de la photo pour les écrans moyens
+        width: 40px;
         height: 40px;
       }
 
       .name-host {
-        font-size: 14px; // Taille du texte pour les écrans moyens
+        font-size: 14px;
+        max-width: 80px;
+        margin-top: 5px;
       }
-    }
-
-    .rating {
-      gap: 3px; // Espacement entre les étoiles pour les écrans moyens
     }
   }
 
-  // Styles pour les grands écrans (ordinateurs de bureau)
   @media (min-width: 900px) {
-    flex-direction: row; // Disposition en ligne pour les grands écrans
-    justify-content: space-between; // Espacement entre les éléments
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .rating {
+      order: 0;
+      gap: 5px;
+      width: 196px;
+      height: 36px;
+
+      img.star {
+        width: 24.75px;
+        height: 24px;
+      }
+    }
 
     .host {
-      margin-top: 30px; // Margin-top pour les grands écrans
+      margin-top: 30px;
 
       .picture-host {
-        width: 64px; // Taille de la photo pour les grands écrans
+        width: 64px;
         height: 64px;
       }
 
       .name-host {
-        font-size: 18px; // Taille du texte pour les grands écrans
+        font-size: 18px;
       }
-    }
-
-    .rating {
-      margin-top: 0; // Retire le margin-top pour les grands écrans
-      gap: 5px; // Espacement entre les étoiles pour les grands écrans
     }
   }
 }

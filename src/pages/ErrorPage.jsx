@@ -2,6 +2,7 @@
 
 import React from 'react';
 import "../styles/errorPage.scss";
+import "../styles/global.scss";
 
 function ErrorPage() {
   return (

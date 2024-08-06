@@ -1,23 +1,23 @@
 .apropos-collapses-container {
-    margin: 19px auto;
-    gap: 20px;
-    padding: 0 108.5px;
-  
-    @media (min-width: 600px) {
-      margin-top: 38px;
-      margin-bottom: 36px;
+  margin: 19px auto;
+  gap: 20px;
+  padding: 0; // Pas de padding en mobile
+
+  @media (min-width: 600px) {
+    padding: 0 108.5px; // Padding pour les écrans moyens et grands
+    margin-top: 38px;
+    margin-bottom: 36px;
+  }
+
+  .collapse-item {
+    .collapse-header {
+      background-color: #FF6060;
+      color: #fff;
     }
-  
-    .collapse-item {
-      .collapse-header {
-        background-color: #FF6060;
-        color: #fff;
-      }
-  
-      .collapse-content {
-        background-color: #fff;
-        color: #000;
-      }
+
+    .collapse-content {
+      background-color: #fff;
+      color: #000;
     }
   }
-  
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../styles/global.scss"
 import "../styles/banner.scss";
 
 function Banner({ img, text, className }) {
