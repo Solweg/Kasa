@@ -1,7 +1,5 @@
-// Détails d'un logement avec carrousel, informations, tags et collapses.
-
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Carroussel from "../components/Carroussel";
 import Collapses from "../components/Collapses.jsx";
 import data from "../data.json";
@@ -13,10 +11,17 @@ import "../styles/logement.scss";
 
 function Logement() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const logement = data.find(item => item.id === id);
 
+  useEffect(() => {
+    if (!logement) {
+      navigate("/error"); // Redirection vers la page d'erreur
+    }
+  }, [logement, navigate]);
+
   if (!logement) {
-    return <div>Logement non trouvé</div>;
+    return null; 
   }
 
   const logementData = [
@@ -42,7 +47,7 @@ function Logement() {
       <div className="info-container">
         <div className="info-container--left">
           <TitleAccommodations title={logement.title} location={logement.location} />
-        <Tags tags={logement.tags} />
+          <Tags tags={logement.tags} />
         </div>
         <div className="info-container--right">  
           <HostInfo host={logement.host} rating={logement.rating} />
@@ -52,7 +57,6 @@ function Logement() {
         <Collapses items={logementData} containerClass="logement-collapses-container" />
       </div>
     </div>  
-    
   );
 }
 
