@@ -49,6 +49,7 @@ $container-bg-color: #F6F6F6;
     height: 100%;
     display: block;
     object-fit: cover;
+    aspect-ratio: 335/255;
 
     @media (min-width: #{$bp-sm}) {
       aspect-ratio: 1 / 1;
@@ -77,5 +78,9 @@ $container-bg-color: #F6F6F6;
     color: white;
     text-align: left;
     z-index: 1;
+    
+    @media (min-width: #{$bp-sm}) {
+    height: 3em;
+    }
   }
 }
